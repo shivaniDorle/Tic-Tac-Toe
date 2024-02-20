@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: rgb(174, 0, 255);
+    background-image: url('bg.jpg'); */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: transparent; /* Set background color to transparent */
+    position: relative;
+}
+
+#video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video is behind other content */
+}
+
+.container {
+    height: 70vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: 3px solid violet;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color:rgb(0, 238, 255);
+    background-color: transparent;
+}
+
+
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 1rem;
+    border: 3px solid violet;
+}
+
+#new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: black;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg {
+    color: #fff;
+    font-size: 5vmin;
+}
+
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.scores p {
+    margin: 0;
+    color: #fff;
+}
+
+.scores span {
+    font-weight: bold;
+    color: #fff;
+    margin-left: 5px;
+}
+
+h1 {
+    color: #fff;
+}
+
+
+
+
+
+
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box {
+    /* Your existing styles */
+    transition: transform 0.2s; /* Add a smooth transition */
+}
+
+.box.clicked {
+    animation: buttonClick 0.5s ease;
+}
